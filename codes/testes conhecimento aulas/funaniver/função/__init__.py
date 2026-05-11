@@ -17,6 +17,7 @@ def existe(arquive):
         except Exception as e:
             print(f"ERROR AO CRIAR O ARQUIVO {e}")
 
+
 #se é pra adicionar
 def add(day, month, person):
     try:
@@ -24,6 +25,7 @@ def add(day, month, person):
             arquivo.write(f"{day},{month},{person}\n")
     except Exception as a:
         print(f"ERRO AO ADICIONAR POR {a}")
+
 
 #todas as datas
 def all():
@@ -33,6 +35,7 @@ def all():
             print(conteudo)
     except Exception as e:
         print(f"Erro em {e}")
+
 
 #verificar as datas pra o dia
 def aniversario_hoje():
@@ -60,6 +63,7 @@ def aniversario_hoje():
 def especificar(day, month):
     day = str(day)
     month = str(month)
+    a = 0
     with open("birthdays.txt", "r", encoding="UTF-8") as arquivo:
         for linha in arquivo:
             linha = linha.strip()
@@ -71,9 +75,10 @@ def especificar(day, month):
                 nome = partes[2]
 
             if day == dia and mes == month:
-                print(f"O aniversário de {nome} é hoje")
+                a += 1
+                return f"O aniversário de {nome} é hoje"
 
-        if not day == dia and month == mes:
-            print("Ninguém faz aniversário nesse dia.")
+    if a != 1:
+        return "Ninguém faz aniversário nesse dia."
 
 
