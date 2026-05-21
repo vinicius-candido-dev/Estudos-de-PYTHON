@@ -10,7 +10,7 @@ class Empty:
         return f'{self.first} {self.last}'
 
 
-pessoa = Empty('vini','maia',5000)
+pessoa = Empty('vini','maia',6000)
 print(pessoa.email)
 print(pessoa.pay)
 print(pessoa.fullname())
