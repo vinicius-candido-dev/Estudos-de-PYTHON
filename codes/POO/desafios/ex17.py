@@ -6,7 +6,7 @@ class Produto:
         self.preco = preco
 
     def etiqueta(self):
-        return Panel(f'{self.nome:^32}\n {"-----------------------------":^30}\n {f".........R${self.preco}.00.........."} ', title="Produto",style="red", width=35, height=5)
+        return Panel(f'[bold white] {self.nome:^32}\n {"-----------------------------":^30}\n {f".........R${self.preco}.00.........."}[/] ', title="Produto",style="red", width=35, height=5)
 
 
 p1 = Produto("kinder ovo","R$500")
