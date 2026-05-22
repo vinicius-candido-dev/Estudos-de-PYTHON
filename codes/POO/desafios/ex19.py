@@ -1,4 +1,5 @@
 from rich import print
+from rich import emoji
 class Livro():
     def __init__(self, titulo, paginas):
         self.titulo = titulo
@@ -8,8 +9,8 @@ class Livro():
         pag = 1
         if pag == 1:
             return f'[bold blue]Você acabou de abrir o livro "[/][bold red]{self.titulo}[/][bold blue]" que tem[/] [bold green]{self.paginas} paginas[/] [bold blue]no total. Você agora está na [/][bold yellow] página {self.paginas} [/]'
-        else:
-            for
+        '''else:
+            for '''
 
 
 d1 = Livro('Em busca da verdade',20)
