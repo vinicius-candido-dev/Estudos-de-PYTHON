@@ -12,12 +12,12 @@ class Churasco():
             comprar = self.quant * 0.4
             custo = 82.40 * comprar
             pag_perso = custo / self.quant
-            panel = Panel(f'Analisando [bold green]{self.titulo}[/] com [blue]{self.quant} convidados[/]'
-                          '\nCada participante comerá 0.4Kg e cada Kg custa R$82.40' 
-                          f'\nRecomendo [bold blue]compra {comprar:,.2f}0Kg[/] de carne'
-                          f'\nO custo total será de [bold green]R${custo:.2f}[/]'
-                          f'\nCada pessoa pegará [bold yellow]R${pag_perso:.2f}[/] para participar.'
-                          ,title='Churras dos amigos')
+            write = f'Analisando [bold green]{self.titulo}[/] com [blue]{self.quant} convidados[/]\n'
+            write += 'Cada participante comerá 0.4Kg e cada Kg custa R$82.40\n'
+            write += f'Recomendo [bold blue]compra {comprar:,.2f}0Kg[/] de carnez\n'
+            write += f'O custo total será de [bold green]R${custo:.2f}[/]\n'
+            write += f'Cada pessoa pegará [bold yellow]R${pag_perso:.2f}[/] para participar.'
+            panel = Panel(write, title='Churras dos amigos')
             return panel
         except Exception as e:
             return f'Existe um erro {e}. Por favor, resolva!'

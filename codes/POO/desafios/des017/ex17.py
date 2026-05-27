@@ -10,7 +10,7 @@ class Produto:
         return f"{self.nome} custa R${self.preco:,.2f}"
 
     def etiqueta(self):
-        conteudo = f"{self.nome.center(30, '-')}"
+        conteudo = f"{self.nome.center(30, '-')}\n"
         conteudo += f"{'-' * 30}" 
         precof = f"R${self.preco:,.2f}"
         conteudo += f"{precof.center(30, '-')}"
