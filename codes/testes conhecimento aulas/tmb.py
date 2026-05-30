@@ -1,3 +1,6 @@
+
+
+
 def tmb(idade, peso, altura):
     # homem
     # kg e cm
@@ -7,5 +10,6 @@ def tmb(idade, peso, altura):
 
 def get(tmb,fator):
     pass
+
 
 print(tmb(17,87.5,169))
